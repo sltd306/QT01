@@ -34,10 +34,8 @@ public class WordCounter {
 		} else {
 			throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
 		}
-		//String indexDir = prop.getProperty("indexCounterDir");
-		//String csvDir = prop.getProperty("csvDir");
-		String indexDir = "E:/projekte/intern/LuceneTest01/Data/index/";
-		String csvDir = "E:/projekte/intern/LuceneTest01/Data/csv/test.csv";
+		String indexDir = prop.getProperty("indexPath");
+		String csvDir = prop.getProperty("csvDir");
 
 		//
 		Directory dir = FSDirectory.open(Paths.get(indexDir));
